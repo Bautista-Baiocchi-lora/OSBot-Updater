@@ -15,7 +15,8 @@ public class BotApplication extends MethodAnalyserFrame {
 
 	public void identify() {
 		this.setParent("BotApp", ClassCache.botApplication);
-		this.setNeededHooks(Arrays.asList("BotAppInstance", "AccountInstance", "BotInstance"));
+		this.setNeededHooks(Arrays.asList("BotAppInstance", "AccountInstance", "BotInstance","Preference class instance" ));
+
 		addHook(new Hook(Hook.Key.BOT_APP_INSTANCE.getName(), getFields(getParent(), "L" + ClassCache.botApplication.getName() + ";").get(0)));
 		List<MethodNode> methodList = getParent().methods;
 		for (MethodNode m : methodList) {
@@ -24,6 +25,9 @@ public class BotApplication extends MethodAnalyserFrame {
 			}
 			if (m.desc.contains("rs07/Bot")) {
 				addHook(new Hook(Hook.Key.BOT_INSTANCE.getName(), m));
+			}
+			if(m.desc.contains(ClassCache.preferenceClass.getNodes().get(0).name)) {
+				addHook(new Hook(Hook.Key.PREFERENCE_CLASS_INSTANCE.getName(), m));
 			}
 		}
 	}

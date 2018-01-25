@@ -27,7 +27,7 @@ public class ScriptCache extends MethodAnalyserFrame {
         }
 
         for (ClassNode classNode : CLASSES.values()) {
-            if(classNode.name.contains("LPT8")) {
+
                 List<FieldNode> fields = classNode.fields;
                 for(FieldNode f : fields) {
                     if(f.desc.equals("Ljava/util/TreeMap;")) {
@@ -37,6 +37,6 @@ public class ScriptCache extends MethodAnalyserFrame {
                     }
                 }
             }
-        }
+
     }
 }

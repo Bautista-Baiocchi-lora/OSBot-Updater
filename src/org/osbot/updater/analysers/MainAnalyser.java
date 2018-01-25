@@ -58,14 +58,14 @@ public class MainAnalyser {
 
     private void logPrint() {
         for (ClassAnalyserFrame a : this.classAnalysers) {
-            System.out.print(" # " + a.getId() + ": " + a.getNodes().get(0).name);
+            System.out.print(" # " + a.getId() + ": " + a.getNodes().get(0).name.replace('/','.'));
             System.out.println();
             if (a.hasMethodAnalyser) {
                 for (Hook f : a.getMethodAnalyser().getHooks()) {
                     if(f.getOwner() == null) {
-                        System.out.println("     ~> " + f.getId() + " : " + a.getNodes().get(0).name + "." + f.getName() + " || "+f.getDesc());
+                        System.out.println("     ~> " + f.getId() + " : " + a.getNodes().get(0).name.replace('/','.') + "." + f.getName() + " || "+f.getDesc());
                     } else {
-                        System.out.println("     ~> " + f.getId() + " : " + f.getOwner() + "." + f.getName()+ " || "+f.getDesc());
+                        System.out.println("     ~> " + f.getId() + " : " + f.getOwner().replace('/','.') + "." + f.getName()+ " || "+f.getDesc());
 
                     }
                 }
