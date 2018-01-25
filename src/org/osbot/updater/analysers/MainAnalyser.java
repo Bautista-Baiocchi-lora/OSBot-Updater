@@ -6,14 +6,12 @@ import org.osbot.updater.main.Loader;
 import org.osbot.updater.misc.Hook;
 import org.objectweb.asm.tree.ClassNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class MainAnalyser {
     private Map<String, ClassNode> CLASSES = Loader.classArchive.classes;
     private List<ClassAnalyserFrame> classAnalysers = new ArrayList();
+    private Map<String, HookFrame> hookMap = new HashMap<>();
 
     private void loadClasses() {
         this.classAnalysers.add(ClassCache.botApplication);
@@ -63,22 +61,30 @@ public class MainAnalyser {
             if (a.hasMethodAnalyser) {
                 for (Hook f : a.getMethodAnalyser().getHooks()) {
                     if(f.getOwner() == null) {
-                        System.out.println("     ~> " + f.getId() + " : " + a.getNodes().get(0).name.replace('/','.') + "." + f.getName() + " || "+f.getDesc());
+                     //   System.out.println("     ~> " + f.getId() + " : " + a.getNodes().get(0).name.replace('/','.') + "." + f.getName() + " || "+f.getDesc());
+                        hookMap.put(f.getId(), new HookFrame(f.getId(), a.getNodes().get(0).name.replace("/","."), f.getName(), f.getDesc()));
                     } else {
-                        System.out.println("     ~> " + f.getId() + " : " + f.getOwner().replace('/','.') + "." + f.getName()+ " || "+f.getDesc());
+                     //   System.out.println("     ~> " + f.getId() + " : " + f.getOwner().replace('/','.') + "." + f.getName()+ " || "+f.getDesc());
+                        hookMap.put(f.getId(), new HookFrame(f.getId(), f.getOwner().replace('/','.'), f.getName(), f.getDesc()));
 
                     }
                 }
             }
         }
     }
+    private void mapPrint() {
+        for(Map.Entry<String, HookFrame> entry : hookMap.entrySet()) {
+            System.out.println("Key: "+entry.getKey() + " || clazz: "+entry.getValue().getClazz() + " || field: "+entry.getValue().getField());
 
+        }
+    }
 
     public void run() {
         loadClasses();
         runClassAnalysers();
         runMethodAnalysers();
         logPrint();
+        mapPrint();
     }
 
 }

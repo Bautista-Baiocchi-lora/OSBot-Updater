@@ -20,7 +20,7 @@ public class PreferenceClass extends MethodAnalyserFrame {
 		List<MethodNode> methods = getMethods(getParent(), false, ClassCache.randomsClass.getName());
 		for (MethodNode m : methods) {
 			if (m.desc.contains("java/lang/String")) {
-				addHook(new Hook(Hook.Key.PREFERENCE_CLASS_INSTANCE.getName(), m));
+				addHook(new Hook(Hook.Key.BOT_PREFERENCES.getName(), m));
 			}
 		}
 
