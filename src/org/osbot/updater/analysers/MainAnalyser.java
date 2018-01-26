@@ -7,6 +7,8 @@ import org.osbot.updater.misc.Hook;
 import org.objectweb.asm.tree.ClassNode;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainAnalyser {
     private Map<String, ClassNode> CLASSES = Loader.classArchive.classes;
@@ -62,29 +64,50 @@ public class MainAnalyser {
                 for (Hook f : a.getMethodAnalyser().getHooks()) {
                     if(f.getOwner() == null) {
                      //   System.out.println("     ~> " + f.getId() + " : " + a.getNodes().get(0).name.replace('/','.') + "." + f.getName() + " || "+f.getDesc());
-                        hookMap.put(f.getId(), new HookFrame(f.getId(), a.getNodes().get(0).name.replace("/","."), f.getName(), f.getDesc()));
+                        hookMap.put(f.getId(), new HookFrame(f.getId(), a.getNodes().get(0).name.replace("/","."), f.getName(), parseReturn(f.getDesc()), parseParamCount(f.getDesc())));
                     } else {
                      //   System.out.println("     ~> " + f.getId() + " : " + f.getOwner().replace('/','.') + "." + f.getName()+ " || "+f.getDesc());
-                        hookMap.put(f.getId(), new HookFrame(f.getId(), f.getOwner().replace('/','.'), f.getName(), f.getDesc()));
+                        hookMap.put(f.getId(), new HookFrame(f.getId(), f.getOwner().replace('/','.'), f.getName(), parseReturn(f.getDesc()), parseParamCount(f.getDesc())));
 
                     }
                 }
             }
         }
     }
-    private void mapPrint() {
+    private void printMap() {
         for(Map.Entry<String, HookFrame> entry : hookMap.entrySet()) {
-            System.out.println("Key: "+entry.getKey() + " || clazz: "+entry.getValue().getClazz() + " || field: "+entry.getValue().getField());
-
+            System.out.println("Key: "+entry.getKey()+ " || Class: "+ entry.getValue().getClazz() + " || Field: "
+            + entry.getValue().getField() + " || Return: "+entry.getValue().getReturnType() + " || ParamCount: "+entry.getValue().getParamCount() );
         }
     }
-
+    private int parseParamCount(String desc) {
+        Matcher m = Pattern.compile("\\(([^)]+)\\)").matcher(desc);
+        while(m.find()) {
+            if(m.group(1).contains(";")) {
+                String[] split = m.group(1).split(";");
+                return split.length;
+            }
+        }
+        return 0;
+    }
+    private String parseReturn(String desc) {
+        if(desc.contains(")")) {
+            desc = desc.substring(desc.indexOf(")") + 1);
+            desc = desc.replaceAll(";", "");
+            desc = desc.replace('/', '.').trim();
+            if (desc.substring(0, 1).equals("L")) {
+                desc = desc.replaceFirst("L", "");
+                return desc;
+            }
+        }
+            return "null";
+    }
     public void run() {
         loadClasses();
         runClassAnalysers();
         runMethodAnalysers();
         logPrint();
-        mapPrint();
+        printMap();
     }
 
 }

@@ -7,13 +7,15 @@ public class HookFrame {
     private String key;
     private String clazz;
     private String field;
-    private String desc;
+    private String returnType;
+    private int paramCount;
 
-    public HookFrame(String key, String clazz, String field, String desc) {
+    public HookFrame(String key, String clazz, String field, String returnType, int paramCount) {
         this.key = key;
         this.clazz = clazz;
         this.field = field;
-        this.desc = desc;
+        this.returnType = returnType;
+        this.paramCount = paramCount;
     }
 
     public String getKey() {
@@ -28,7 +30,11 @@ public class HookFrame {
         return field;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getReturnType() {
+        return returnType;
+    }
+
+    public int getParamCount() {
+        return paramCount;
     }
 }
