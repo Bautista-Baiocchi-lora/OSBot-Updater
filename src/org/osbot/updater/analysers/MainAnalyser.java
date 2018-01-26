@@ -28,6 +28,7 @@ public class MainAnalyser {
 		this.classAnalysers.add(ClassCache.preferenceClass);
 		this.classAnalysers.add(ClassCache.scriptClass);
 		this.classAnalysers.add(ClassCache.scriptCache);
+		this.classAnalysers.add(ClassCache.scriptManifest);
 	}
 
 	private void runClassAnalysers() {
@@ -77,6 +78,9 @@ public class MainAnalyser {
 
 					}
 				}
+
+			} else {
+				hookMap.put(a.getId(), new HookFrame(a.getId(), a.getNodes().get(0).name.replace("/", "."), null, null, 0));
 			}
 		}
 	}
@@ -109,7 +113,7 @@ public class MainAnalyser {
 				return desc;
 			}
 		}
-		return "";
+		return null;
 	}
 
 	private void saveMap() {

@@ -13,7 +13,7 @@ public class ScriptClass extends ClassAnalyserFrame {
     private int classCount = 0;
 
     public void identify(ClassNode c) {
-        ClassCache.scriptClass.setId("ScriptClass");
+        ClassCache.scriptClass.setId("SDN script");
         FieldSearcher fieldSearch = new FieldSearcher(c);
         manifestCount = fieldSearch.countDesc("Lorg/osbot/rs07/script/ScriptManifest;");
         classCount = fieldSearch.countDesc("Ljava/lang/Class;");

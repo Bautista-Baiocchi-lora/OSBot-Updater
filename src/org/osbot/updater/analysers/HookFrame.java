@@ -44,8 +44,12 @@ public class HookFrame {
 		JSONObject hookJson = new JSONObject();
 		hookJson.put("Key", getKey());
 		hookJson.put("class", getClazz());
-		hookJson.put("target", getField());
-		hookJson.put("return type", getReturnType());
+		if(field != null) {
+			hookJson.put("target", getField());
+		}
+		if (returnType != null) {
+			hookJson.put("return type", getReturnType());
+		}
 		hookJson.put("parameter count", getParamCount());
 		return hookJson;
 	}

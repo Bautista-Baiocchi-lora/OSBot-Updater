@@ -11,5 +11,6 @@ public class ClassCache {
     public static RandomsClass randomsClass = new RandomsClass();
     public static PreferenceClass preferenceClass = new PreferenceClass();
     public static ScriptClass scriptClass = new ScriptClass();
+    public static ScriptManifest scriptManifest = new ScriptManifest();
 
 }
