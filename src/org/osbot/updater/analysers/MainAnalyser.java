@@ -80,8 +80,10 @@ public class MainAnalyser {
 				}
 
 			} else {
-				hookMap.put(a.getId(), new HookFrame(a.getId(), a.getNodes().get(0).name.replace("/", "."), null, null, 0));
-			}
+				if(!a.getId().equals("RandomsClass")) {
+					hookMap.put(a.getId(), new HookFrame(a.getId(), a.getNodes().get(0).name.replace("/", "."), null, null, 0));
+				}
+				}
 		}
 	}
 
@@ -110,7 +112,7 @@ public class MainAnalyser {
 			desc = desc.replace('/', '.').trim();
 			if (desc.substring(0, 1).equals("L")) {
 				desc = desc.replaceFirst("L", "");
-				return desc;
+				return "public class "+desc;
 			}
 		}
 		return null;

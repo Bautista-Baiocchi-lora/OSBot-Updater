@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="584cd4ad-6e01-4926-bb50-75aa25399775" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ScriptManifest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/asm_all_5_2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/HookFrame.class" afterPath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/HookFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/MainAnalyser.class" afterPath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/MainAnalyser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/methods/AccountSettings.class" afterPath="$PROJECT_DIR$/out/production/OSBot-Updater/org/osbot/updater/analysers/methods/AccountSettings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OSBot-Updater.iml" afterPath="$PROJECT_DIR$/OSBot-Updater.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/osbot/updater/analysers/HookFrame.java" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/HookFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ScriptClass.java" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ScriptClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/core/ClassCache.java" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/core/ClassCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/osbot/updater/analysers/methods/AccountSettings.java" afterPath="$PROJECT_DIR$/src/org/osbot/updater/analysers/methods/AccountSettings.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,21 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainAnalyser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainAnalyser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+            <state relative-caret-position="327">
+              <caret line="82" column="50" lean-forward="false" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HookFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HookFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/HookFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+              <caret line="50" column="40" lean-forward="false" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding>
                 <element signature="e#511#512#0" expanded="true" />
                 <element signature="e#528#529#0" expanded="true" />
@@ -104,8 +92,8 @@
       <file leaf-file-name="RandomsClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/RandomsClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -115,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/PreferenceClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="13" column="39" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="13" selection-end-column="39" />
+              <caret line="13" column="39" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="13" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -167,14 +155,14 @@
         <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/methods/AccountSettings.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/core/ClassCache.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ScriptClass.java" />
-        <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ScriptManifest.java" />
         <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/HookFrame.java" />
+        <option value="$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -656,7 +644,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -668,7 +656,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3244397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3244397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1110,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/RandomsClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/ClassAnalyserFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1129,15 +1109,7 @@
     <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/PreferenceClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="13" column="39" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="81" column="20" lean-forward="true" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <caret line="13" column="39" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1161,7 +1133,7 @@
     <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/HookFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <caret line="50" column="40" lean-forward="false" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="e#511#512#0" expanded="true" />
             <element signature="e#528#529#0" expanded="true" />
@@ -1174,6 +1146,22 @@
             <element signature="e#713#714#0" expanded="true" />
             <element signature="e#737#738#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/classes/RandomsClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/osbot/updater/analysers/MainAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="82" column="50" lean-forward="false" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
