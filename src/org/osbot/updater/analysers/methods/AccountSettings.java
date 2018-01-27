@@ -43,21 +43,21 @@ public class AccountSettings extends MethodAnalyserFrame {
         }
         for (MethodNode method : methodList) {
             if (method != null) {
-               if(method.name.equals("<init>")) {
-                   Searcher search = new Searcher(method);
-                   AbstractInsnNode[] insnNodes = method.instructions.toArray();
-                   int count = 0;
-                   for (int i = 0; i < 100; ++i) {
-                       l = search.find(new int[]{Opcodes.PUTFIELD}, i);
-                        if(l != -1) {
+                if (method.name.equals("<init>")) {
+                    Searcher search = new Searcher(method);
+                    AbstractInsnNode[] insnNodes = method.instructions.toArray();
+                    int count = 0;
+                    for (int i = 0; i < 100; ++i) {
+                        l = search.find(new int[]{Opcodes.PUTFIELD}, i);
+                        if (l != -1) {
                             count++;
-                            if(count == 6) {
+                            if (count == 6) {
                                 addHook(new Hook(Hook.Key.NAME.getName(), insnNodes, l));
                                 break;
                             }
                         }
-                   }
-               }
+                    }
+                }
             }
         }
     }
